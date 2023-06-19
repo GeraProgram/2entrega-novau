@@ -17,6 +17,9 @@ body {
   border: solid 5px;
   border-color: white;
   margin-left: 35%;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
 }
 
 img {
@@ -34,7 +37,10 @@ h2 {
     border-color: white;
     margin-left: 25%;
     margin-right: 25%;
-   padding: 1em;
+    padding: 1em;
+    animation-duration: 1s;
+    animation-name: movimientotitulo;
+    animation-iteration-count: 1;
 }
 
 p { 
@@ -134,58 +140,65 @@ iframe {
   
 @media (max-width: 450px) 
 {h2 
-     {font-size: 75%;
+     { font-size: 75%;
+     } 
+    
+ iframe 
+    { height: 200px;
+     width: 200px;
+     margin-left: none;
+     } 
+    
+ nav 
+        {display: block;
+         font-size: small;
+        } 
+    
+ .conta 
+        {width: 75px;
+        height: 25px;
+        margin-top: 5px;
+        margin-right: 25%;
+        
+        } 
+    
+ p 
+        {font-size: small;
+        } 
+    
+ li
+       { display: block;
+          margin: 5px;
+        } 
+    
+ img
+        { width: 5em; 
+       height: 9em;
+       }
+    
+ .secciones
+        { margin-left: 50px;}
+    
+ body { background-position: 50%;
+    }
+ 
+ .producto  {width: 50%;
+    height: 25%;
      } 
 }
 
-@media (max-width: 450px) 
-  {iframe 
-     {height: 200px;
-      width: 200px;
-      margin-left: none;
-     } 
-   }
+@keyframes aparecer { 
+    0% {opacity: 0;}
+ 100% {opacity: 1;}   
+}
 
-   @media (max-width: 450px) 
-   {nav 
-      {display: block;
-       font-size: small;
-      } 
-    }
+@keyframes movimientotitulo { 
+    from { transform: translate(110vh);}
+    to {transform: translate(0);}
+}
+   
 
-    @media (max-width: 450px) 
-  {.conta 
-     {width: 75px;
-     height: 25px;
-     margin-top: 5px;
-     margin-right: 25%;
-     
-     } 
-   }
+   
 
-   @media (max-width: 450px) 
-  {p 
-     {font-size: small;
-     } 
-   }
 
-   @media (max-width: 450px) 
-   {li
-      { display: block;
-        margin: 5px;
-      } 
-    }
-
-@media (max-width: 450px)
-   {img
-      {width: 5em; 
-     height: 9em;
-     }}
-@media (max-width: 450px)
-   {.secciones
-     {margin-left: 50px;}
-    }
-
-@media (max-width: 450px)
- {body{background-position: 50%;
- }}
+ 
